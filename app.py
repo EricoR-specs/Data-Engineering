@@ -19,7 +19,7 @@ lb = st.number_input("Luas Bangunan")
 jkt = st.number_input("Jumlah Kamar Tidur")
 jkm = st.number_input("Jumlah Kamar Mandi")
 opt = st.selectbox(
-    'Garasi',
+    'Garai',
     ('Ada', 'Tidak ada')
 )
 
