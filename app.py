@@ -5,7 +5,7 @@ import streamlit as st
 with open ("prediksi_harga_rumah.pkl", "rb") as f:
     model = pickle.load(f)
 
-def prediksi(Luas Tanah,Luas Bangunan,Jumlah Kamar Tidur,Jumlah Kamar Mandi,Garasi):
+def prediksi(LT,LB,JKT,JKM,GRS):
     predict = pd.DataFrame()
     predict['Luas Tanah'] = [Luas Tanah]
     predict['Luas Bangunan'] = [Luas Bangunan]
