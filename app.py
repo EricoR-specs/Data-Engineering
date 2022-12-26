@@ -7,7 +7,7 @@ with open ("prediksi_harga_rumah.pkl", "rb") as f:
 
 def prediksi(LT,LB,JKT,JKM,GRS):
     predict = pd.DataFrame()
-    predict['LT'] = [LT]
+    predict["Luas Tanah"] = [LT]
     predict['Luas Bangunan'] = [LB]
     predict['Jumlah Kamar Tidur'] = [JKT]
     predict['Jumlah Kamar Mandi'] = [JKM]
