@@ -12,7 +12,7 @@ def prediksi(LT,LB,JKT,JKM,GRS):
     predict['Jumlah Kamar Tidur'] = [JKT]
     predict['Jumlah Kamar Mandi'] = [JKM]
     predict['Garasi'] = [GRS]
-    return(model.predict(predict))   
+    return(model.predict(predict)[0])   
 
 lt = st.number_input("Luas Tanah")
 lb = st.number_input("Luas Bangunan")
