@@ -11,7 +11,7 @@ def prediksi(LT,LB,JKT,JKM,GRS):
     predict['Luas Bangunan'] = [LB]
     predict['Jumlah Kamar Tidur'] = [JKT]
     predict['Jumlah Kamar Mandi'] = [JKM]
-    predict['Garasi'] = [GRS]
+    predict['arasi'] = [GRS]
     return(model.predict(predict)[0])   
 
 lt = st.number_input("Luas Tanah")
