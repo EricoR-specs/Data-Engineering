@@ -7,11 +7,11 @@ with open ("prediksi_harga_rumah.pkl", "rb") as f:
 
 def prediksi(LT,LB,JKT,JKM,GRS):
     predict = pd.DataFrame()
-    predict["Luas Tanah"] = [LT]
-    predict['Luas Bangunan'] = [LB]
-    predict['Jumlah Kamar Tidur'] = [JKT]
-    predict['Jumlah Kamar Mandi'] = [JKM]
-    predict['Garasi'] = [GRS]
+    predict['LT'] = [LT]
+    predict['LB'] = [LB]
+    predict['JKT'] = [JKT]
+    predict['JKM'] = [JKM]
+    predict['GRS'] = [GRS]
     return(model.predict(predict)[0])   
 
 lt = st.number_input("Luas Tanah")
