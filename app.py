@@ -1,6 +1,7 @@
 import pickle
 import pandas as pd
 import streamlit as st
+from sklearn.ensemble import RandomForestRegressor
 
 with open ("prediksi_harga_rumah.pkl", "rb") as f:
     model = pickle.load(f)
@@ -11,7 +12,7 @@ def prediksi(LT,LB,JKT,JKM,GRS):
     predict['Luas Bangunan'] = [LB]
     predict['Jumlah Kamar Tidur'] = [JKT]
     predict['Jumlah Kamar Mandi'] = [JKM]
-    predict['arasi'] = [GRS]
+    predict['Garasi'] = [GRS]
     return(model.predict(predict)[0])   
 
 lt = st.number_input("Luas Tanah")
@@ -19,7 +20,7 @@ lb = st.number_input("Luas Bangunan")
 jkt = st.number_input("Jumlah Kamar Tidur")
 jkm = st.number_input("Jumlah Kamar Mandi")
 opt = st.selectbox(
-    'Garai',
+    'Garasi',
     ('Ada', 'Tidak ada')
 )
 
