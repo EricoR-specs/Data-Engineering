@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 import streamlit as st
 
-with open ("prediksiharga", "rb") as f:
+with open ("prediksi_harga_rumah.pkl", "rb") as f:
     model = pickle.load(f)
 
 def prediksi(LT,LB,JKT,JKM,GRS):
